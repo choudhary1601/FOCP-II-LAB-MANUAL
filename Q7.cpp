@@ -3,54 +3,21 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
+    int a, b, c;
+    cout << "Enter scores: ";
+    cin >> a >> b >> c;
 
-    int players[3];
-    for (int i = 0; i < 3; i++)
-    {
-        cout << "Enter the score of player" << i + 1;
-        cin >> players[i];
-    }
-
-    if (players[1] > players[2])
-    {
-        if (players[1] > players[3])
-        {
-            cout << "The winner is 1";
-        }
-        else if (players[1] = players[3])
-        {
-            cout << "Winners are players 1 and 3";
-        }
-        else
-        {
-            cout << "The winner is 3";
-        }
-    }
-    else if (players[1] < players[3])
-    {
-        if (players[2] > players[3])
-        {
-            cout << "The winner is 2";
-        }
-        else if (players[2] = players[3])
-        {
-            cout << "Winners are players 2 and 3";
-        }
-        else
-        {
-            cout << "The winner is 3";
-        }
-    }
-    else if ((players[1] = players[2]) && (players[1] > players[2]))
-    {
-        cout << "Winners are players 1 and 2";
-    }
+    if (a > b && a > c)
+        cout << "Player 1 wins";
+    else if (b > a && b > c)
+        cout << "Player 2 wins";
+    else if (c > a && c > b)
+        cout << "Player 3 wins";
     else
-    {
-        cout << "All three players have equal scores";
-    }
+        cout << "It's a tie";
 
     return 0;
 }
+
+    
